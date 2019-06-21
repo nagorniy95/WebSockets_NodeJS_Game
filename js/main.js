@@ -37,7 +37,7 @@ $(function () {
   let game;
 
 
-  const socket = io.connect('http://localhost:3000');
+  const socket = io.connect('http://localhost:3000' || 'https://shielded-thicket-44358.herokuapp.com/');
 
   class Player {
     constructor(name, type) {
