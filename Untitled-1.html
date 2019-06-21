@@ -1,0 +1,127 @@
+<h1 align="center">Job Application</h1>
+<br>
+<h3>Personal Information</h3>
+<fieldset>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>Given Name:</strong></p>
+                <p>[text* your-given-name placeholder "First Name *"]</p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>Last name:</strong></p>
+                <p>[text* your-last-name placeholder "Last Name *"]</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>E-mail:</strong></p>
+                <p>[email* your-email placeholder "E-mail Address *"]</p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>Phone number:</strong></p>
+                <p>[tel* your-phone placeholder "Phone number *"]</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>Age:</strong></p>
+                <p>[number* your-age min:18 max:99 placeholder "Age 18-99 *"]</p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>City:</strong></p>
+                <p>[text* your-city placeholder "Your City *"]</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>Country of Residence:</strong></p>
+                <p>[select* your-country-of-residence include_blank "Afghanistan" "Albania" "Algeria" "Andorra" "Angola" "Antigua &amp; Deps" "Argentina" "Armenia" "Australia" "Austria" "Azerbaijan" "Bahamas" "Bahrain" "Bangladesh" "Barbados" "Belarus" "Belgium" "Belize" "Benin" "Bhutan" "Bolivia" "Bosnia Herzegovina" "Botswana" "Brazil" "Brunei" "Bulgaria" "Burkina" "Burundi" "Cambodia" "Cameroon" "Canada" "Cape Verde" "Central African Rep" "Chad" "Chile" "China" "Colombia" "Comoros" "Congo" "Congo {Democratic Rep}" "Costa Rica" "Croatia" "Cuba" "Cyprus" "Czech Republic" "Denmark" "Djibouti" "Dominica" "Dominican Republic" "East Timor" "Ecuador" "Egypt" "El Salvador" "Equatorial Guinea" "Eritrea" "Estonia" "Ethiopia" "Fiji" "Finland" "France" "Gabon" "Gambia" "Georgia" "Germany" "Ghana" "Greece" "Grenada" "Guatemala" "Guinea" "Guinea-Bissau" "Guyana" "Haiti" "Honduras" "Hungary" "Iceland" "India" "Indonesia" "Iran" "Iraq" "Ireland {Republic}" "Israel" "Italy" "Ivory Coast" "Jamaica" "Japan" "Jordan" "Kazakhstan" "Kenya" "Kiribati" "Korea North" "Korea South" "Kosovo" "Kuwait" "Kyrgyzstan" "Laos" "Latvia" "Lebanon" "Lesotho" "Liberia" "Libya" "Liechtenstein" "Lithuania" "Luxembourg" "Macedonia" "Madagascar" "Malawi" "Malaysia" "Maldives" "Mali" "Malta" "Marshall Islands" "Mauritania" "Mauritius" "Mexico" "Micronesia" "Moldova" "Monaco" "Mongolia" "Montenegro" "Morocco" "Mozambique" "Myanmar, {Burma}" "Namibia" "Nauru" "Nepal" "Netherlands" "New Zealand" "Nicaragua" "Niger" "Nigeria" "Norway" "Oman" "Pakistan" "Palau" "Panama" "Papua New Guinea" "Paraguay" "Peru" "Philippines" "Poland" "Portugal" "Qatar" "Romania" "Russian Federation" "Rwanda" "St Kitts &amp; Nevis" "St Lucia" "Saint Vincent &amp; the Grenadines" "Samoa" "San Marino" "Sao Tome &amp; Principe" "Saudi Arabia" "Senegal" "Serbia" "Seychelles" "Sierra Leone" "Singapore" "Slovakia" "Slovenia" "Solomon Islands" "Somalia" "South Africa" "South Sudan" "Spain" "Sri Lanka" "Sudan" "Suriname" "Swaziland" "Sweden" "Switzerland" "Syria" "Taiwan" "Tajikistan" "Tanzania" "Thailand" "Togo" "Tonga" "Trinidad &amp; Tobago" "Tunisia" "Turkey" "Turkmenistan" "Tuvalu" "Uganda" "Ukraine" "United Arab Emirates" "United Kingdom" "United States" "Uruguay" "Uzbekistan" "Vanuatu" "Vatican City" "Venezuela" "Vietnam" "Yemen" "Zambia" "Zimbabwe"]</p>
+            </div>
+        </div>
+    </div>
+</fieldset>
+<!-- end Personal Information -->
+
+<h3>English/French</h3>
+<fieldset>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>How good are you in English</strong></p>
+                <p>[select* your-english-level include_blank "Beginer" "Elementary" "Intermediate" "Upper-Intermidiate" "Advanced" "Proficient"]</p>
+            </div>
+            <div class="col-md-3">
+                <p><strong>Have you tried IELTS test?</strong></p>
+                <p>[checkbox* english-ielts-test "Yes" "No"]</p>
+            </div>
+            <div class="col-md-3">
+                [group english-ielts]
+                <p><strong>IELTS</strong></p>
+                <p>[select your-english-ielts-test include_blank "From 1.0 to 4.0" "From 4.0 to 6.0" "From 6.0 to 7.0" "From 7.0 to 8.0" "From 8.0 to 9.0" ]</p>
+                [/group]
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>How good are you in French?</strong></p>
+                <p>[select your-french-level include_blank "Beginer" "Elementary" "Intermediate" "Upper-Intermidiate" "Advanced" "Proficient"]</p>
+            </div>
+            <div class="col-md-3">
+                <p><strong>Have you tried IELTS test?</strong></p>
+                <p>[checkbox french-ielts-test "Yes" "No"]</p>
+            </div>
+            <div class="col-md-3">
+                [group french-ielts]
+                <p><strong>IELTS</strong></p>
+                <p>[select your-french-ielts-test include_blank "From 1.0 to 4.0" "From 4.0 to 6.0" "From 6.0 to 7.0" "From 7.0 to 8.0" "From 8.0 to 9.0" ]</p>
+                [/group]
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                [group bad-english]
+                <h3 style="color: red">Sorry, but you cannot work in Canada!</h3>
+                [/group]
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+<h3>Professional knowledge and work experience</h3>
+<fieldset>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>Occupation</strong></p>
+                <p>[text* your-profession-primary-occupation placeholder "Your profession *"]</p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>How many years of expirience do you have?</strong></p>
+                <p>[select* your-working-expirience include_blank "1" "2" "3" "4" "5-10" "10 or more" ]</p>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+
+<h3>Additional information</h3>
+<fieldset>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <p><strong>Please provide any additional information that you think would be relevant to you.</strong></p>
+                <p>[textarea your-additional-useful-info placeholder "Additional Information"]</p>
+            </div>
+        </div>
+    </div>
+</fieldset>
+<!-- end Additional information -->
+<div class="col-md-12">
+    <p style="text-align:center;">[submit "Submit"]</p>
+</div>
+
+<br>

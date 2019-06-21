@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>X | 0 Game</title>
+		<link rel="stylesheet" href="../css/styles.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	</head>
+	<body>
+		<header id="header">
+			<div class="container">
+				<h1 class="left">X | 0 Game</h1>
+				<form id="login" align="center" method="get" action="#" class="right">
+					<input type="text" id="login_txt" autocomplete="off" required placeholder="Your chat name..." />
+					<input id="btn_login" type="submit" value="Login" />
+					<!-- <button id="btn_quit">Leave Chat</button> -->
+				</form>
+				<br class="clear"/>
+			</div>
+		</header>
+		<div class="container">
+			<div class="container-margin">
+			<div>
+				<h2>To Start X | 0 Game you need to find a second player</h2>
+				<div class="game-area">
+					<h4>Create a new Game</h4>
+					<input type="text" name="name" id="nameNew" placeholder="Enter your name" required>
+					<button id="new">New Game</button>
+					<br><br>
+					<h4>Join an existing game</h4>
+					<input type="text" name="name" id="nameJoin" placeholder="Enter your name" required>
+					<input type="text" name="room" id="room" placeholder="Enter Game Room ID" required>
+					<button id="join">Join Game</button>
+				</div>
+				<div class="gameBoard" style="display: none;">
+					<h2 id="userHello"></h2>
+					<h3 id="turn"></h3>
+					<table class="center">
+						<tr>
+							<td><button class="tile" id="button_00"></button></td>
+							<td><button class="tile" id="button_01"></button></td>
+							<td><button class="tile" id="button_02"></button></td>
+						</tr>
+						<tr>
+							<td><button class="tile" id="button_10"></button></td>
+							<td><button class="tile" id="button_11"></button></td>
+							<td><button class="tile" id="button_12"></button></td>
+						</tr>
+						<tr>
+							<td><button class="tile" id="button_20"></button></td>
+							<td><button class="tile" id="button_21"></button></td>
+							<td><button class="tile" id="button_22"></button></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="chat">
+				<h2>Find a player</h2>
+				<div id="roll" class="left">
+					<h3>Online Users</h3>
+					<div class="users-box">
+						<ul id="users">
+							<li class="first-users-message">No users online!</li>
+						</ul>
+					</div>
+					<br class="clear"/>
+				</div>
+				 <form action="#" method="get" class="chat-form right">
+				   <input type="text" id="txt_msg" autocomplete="off" />
+				   <input type="submit" id="btn_send" value="Send" />
+				   <div class="messages-box">
+						<ul id="messages">
+							<li class="first-chat-message">No messages yet!</li>
+						</ul>
+					</div>
+				</form>
+				<br class="clear"/>
+			</div>
+
+			</div>
+		</div>
+		<script src="socket.io/socket.io.js"></script>
+		<script src="../js/main.js"></script>
+	</body>
+</html>

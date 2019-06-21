@@ -1,0 +1,23 @@
+{
+  "name": "tic-tac-toe-plus-chat",
+  "version": "1.0.1",
+  "description": "This is a realtime online multiplayer game with chat.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Artem Nahornyi",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "eslint-plugin-import": "^2.7.0",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "socket.io": "^1.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}
